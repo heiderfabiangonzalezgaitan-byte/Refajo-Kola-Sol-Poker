@@ -8,57 +8,207 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
 
-    <div class="hero-container">
-        <!-- Tarjeta Izquierda (Recuadro del Refajo) -->
-        <div class="product-card-wrapper">
-            <div class="refajo-card">
-                <span class="brand-subtitle">Gaseosas Sol</span>
-                <h2 class="brand-title">Refajo</h2>
-                <span class="badge-flavor">Kola Sol + Poker</span>
+    <!-- Header / Nav -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-sol">SOL</span>
+            <span class="logo-badge">OCTUBRE / VERANO</span>
+        </div>
+        <nav class="nav">
+            <a href="#inicio" class="nav-link active">Inicio</a>
+            <a href="#producto" class="nav-link">Presentaciones</a>
+            <a href="#campana" class="nav-link">Fiesta de Octubre</a>
+            <a href="#experiencia" class="nav-link">El Parche</a>
+        </nav>
+        <button class="btn-nav" id="btn-comprar-nav">Pedir Refajo</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <div class="badge-promo">⚡ EDICIÓN LIMITADA OCTUBRE / VERANO ⚡</div>
+            <h1 class="hero-title">REFAJO KOLA SOL + POKER</h1>
+            <p class="hero-subtitle">La mezcla épica que prende todos los parches del verano y las fiestas de octubre. Destapa el verdadero sabor refrescante.</p>
+            <div class="hero-cta">
+                <button class="btn-primary" id="btn-explorar">Descubrir el Sabor</button>
+                <button class="btn-secondary" id="btn-ver-video">Ver Comercial</button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-num">100%</span>
+                    <span class="stat-desc">Sabor Colombiano</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">350ml</span>
+                    <span class="stat-desc">Lata Helada</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">1.5L</span>
+                    <span class="stat-desc">Tetra Pak Familiar</span>
+                </div>
             </div>
         </div>
-
-        <!-- Información Derecha -->
-        <div class="product-details">
-            <div class="brand-header">
-                <div class="brand-logos">
-                    <img src="ruta-logo-kolasol.png" alt="Logo Kola Sol" class="brand-logo">
-                    <span class="collab-icon">×</span>
-                    <img src="ruta-logo-poker.png" alt="Logo Poker" class="brand-logo">
-                </div>
-                <span class="tag-edition">✦ Edición Limitada Octubre / Verano ✦</span>
-            </div>
-
-            <h1 class="product-title">Refajo Kola Sol + Poker</h1>
-            <p class="product-description">
-                La mezcla épica que prende todos los parches del verano y las fiestas de octubre. Destapa el verdadero sabor refrescante.
-            </p>
-
-            <div class="action-buttons">
-                <button class="btn-primary">Descubrir el Sabor</button>
-                <button class="btn-secondary">Ver Comercial</button>
-            </div>
-
-            <div class="specs-container">
-                <div class="spec-item">
-                    <span class="spec-value">100%</span>
-                    <span class="spec-label">Sabor Colombiano</span>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-value">350ml</span>
-                    <span class="spec-label">Lata Helada</span>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-value">1.5L</span>
-                    <span class="spec-label">Tetra Pak Familiar</span>
+        <div class="hero-image-container">
+            <div class="product-mockup">
+                <div class="can-container">
+                    <div class="can-body">
+                        <div class="can-label">
+                            <span class="can-brand">GASEOSAS SOL</span>
+                            <span class="can-flavor">REFAJO</span>
+                            <span class="can-subtext">Kola Sol + Poker</span>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Sección Productos -->
+    <section id="producto" class="section-container">
+        <div class="section-header">
+            <span class="section-tag">PRESENTACIONES</span>
+            <h2 class="section-title">Escoge tu formato de fiesta</h2>
+            <p class="section-desc">Diseñadas para refrescar desde el parche individual hasta la reunión de fin de semana en pleno verano.</p>
+        </div>
+
+        <div class="product-grid">
+            <!-- Card 1 -->
+            <div class="product-card">
+                <div class="card-badge">Personal</div>
+                <div class="card-img-placeholder lata-bg">
+                    <span class="icon-pack">🥤</span>
+                </div>
+                <div class="card-body">
+                    <h3>Lata 350ml</h3>
+                    <p>La dosis perfecta de frescura individual. Fría al instante, lista para destapar en cualquier lugar.</p>
+                    <ul class="card-features">
+                        <li>✓ Enfriamiento ultra rápido</li>
+                        <li>✓ Ideal para llevar en el bolsillo/morral</li>
+                        <li>✓ 100% reciclable</li>
+                    </ul>
+                    <button class="btn-card" data-product="Lata 350ml">Probar Lata</button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="product-card featured">
+                <div class="card-badge gold">Más Vendido</div>
+                <div class="card-img-placeholder tetrapak-bg">
+                    <span class="icon-pack">🧃</span>
+                </div>
+                <div class="card-body">
+                    <h3>Caja Tetra Pak 1.5L</h3>
+                    <p>El formato familiar pensado para rendir en los asados, piscinadas y fiestas de octubre.</p>
+                    <ul class="card-features">
+                        <li>✓ Mantiene el gas y sabor por más tiempo</li>
+                        <li>✓ Fácil de servir y transportar</li>
+                        <li>✓ Empaque ecológico y liviano</li>
+                    </ul>
+                    <button class="btn-card gold-btn" data-product="Tetra Pak 1.5L">Pedir Tetra Pak</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Campaña Octubre / Verano -->
+    <section id="campana" class="section-container campana-bg">
+        <div class="campana-wrapper">
+            <div class="campana-text">
+                <span class="section-tag light">EDICIÓN ESPECIAL</span>
+                <h2>Octubre / Verano: El parche no para</h2>
+                <p>Las tardes soleadas de verano se cruzan con la vibra festiva de octubre. No dejes que la sed apague la música. Refajo Kola Sol + Poker trae la combinación exacta entre el dulce de la Kola Sol y el toque amargo ideal de la Poker.</p>
+
+                <div class="counter-box">
+                    <p class="counter-title">Tiempo restante de la edición limitada:</p>
+                    <div class="timer" id="countdown">
+                        <div class="time-block"><span id="days">12</span><small>Días</small></div>
+                        <div class="time-block"><span id="hours">08</span><small>Horas</small></div>
+                        <div class="time-block"><span id="minutes">45</span><small>Min</small></div>
+                        <div class="time-block"><span id="seconds">30</span><small>Seg</small></div>
+                    </div>
+                </div>
+
+                <button class="btn-primary" id="btn-unirse">¡Unirme al Parche!</button>
+            </div>
+
+            <!-- Bloque Estático de la Fórmula Original -->
+            <div class="campana-interactive">
+                <div class="flavor-mixer">
+                    <h3>Fórmula Original</h3>
+                    <p>El balance perfecto para refrescar tu parche:</p>
+
+                    <div class="static-flavor-info">
+                        <div class="flavor-ratio">
+                            <span>Dulce Kola Sol</span>
+                            <strong>50%</strong>
+                        </div>
+                        <div class="flavor-ratio">
+                            <span>Toque Poker</span>
+                            <strong>50%</strong>
+                        </div>
+                    </div>
+
+                    <div class="result-box">
+                        ¡La mezcla exacta lista para disfrutar! 🍻
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Interactiva / Experiencia -->
+    <section id="experiencia" class="section-container">
+        <div class="section-header">
+            <span class="section-tag">CULTURA SOL</span>
+            <h2 class="section-title">¿Cómo se vive el Refajo Sol?</h2>
+        </div>
+        <div class="grid-experience">
+            <div class="exp-card">
+                <span class="exp-icon">☀️</span>
+                <h4>Tardes de Sol</h4>
+                <p>Para la piscina, la finca o el fin de semana de relaje.</p>
+            </div>
+            <div class="exp-card">
+                <span class="exp-icon">🎃</span>
+                <h4>Fiestas de Octubre</h4>
+                <p>El trago que acompaña los disfraces y el remate del parche.</p>
+            </div>
+            <div class="exp-card">
+                <span class="exp-icon">🍖</span>
+                <h4>Asados & Comida</h4>
+                <p>Combina de ataque con picadas, empanadas y carne asada.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-sol">GASEOSAS SOL</span>
+                <p>Producto de práctica académica SENA - Tecnólogo en Producción Multimedia.</p>
+            </div>
+            <div class="footer-info">
+                <p>© 2026 Gaseosas Sol. Todos los derechos reservados.</p>
+                <p>Prohibida la venta de bebidas alcohólicas a menores de edad (18+).</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Interactivo -->
+    <div class="modal" id="modal-promo">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <h3 id="modal-title">¡Edición Octubre / Verano!</h3>
+            <p id="modal-body">Te uniste a la experiencia de Gaseosas Sol. ¡Prepárate para refrescar tus fiestas!</p>
+            <button class="btn-primary" id="btn-modal-ok">Entendido</button>
         </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
