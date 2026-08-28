@@ -26,7 +26,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center; /* NIVELA VERTICALMENTE EL RECUADRO Y LA INFORMACIÓN */
+  align-items: center; /* Nivelado vertical del recuadro e información */
   justify-content: space-between;
   gap: 60px;
   padding: 40px 20px;
@@ -90,7 +90,7 @@ body {
 }
 
 /* ==========================================
-   SECCIÓN DERECHA: DETALLES DEL PRODUCTO
+   SECCIÓN DERECHA: DETALLES Y LOGOS
    ========================================== */
 .product-details {
   flex: 1.2;
@@ -99,17 +99,51 @@ body {
   align-items: flex-start;
 }
 
-/* Badge Superior */
+/* Contenedor Superior de Marcas y Badge */
+.brand-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* Sección de Logos en Colaboración */
+.brand-logos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.brand-logo {
+  height: 30px; /* Ajusta este alto según tus imágenes */
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+}
+
+.collab-icon {
+  color: #ff9d00;
+  font-weight: 900;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+/* Badge de Edición Limitada */
 .tag-edition {
   background: linear-gradient(90deg, #ff8c00, #ff0033);
   color: #ffffff;
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 6px 16px;
+  padding: 8px 16px;
   border-radius: 20px;
   letter-spacing: 1px;
-  margin-bottom: 20px;
   box-shadow: 0 0 15px rgba(255, 140, 0, 0.4);
 }
 
@@ -203,7 +237,7 @@ body {
 }
 
 /* ==========================================
-   RESPONSIVE (DISPOSITIVOS MÓVILES)
+   RESPONSIVE
    ========================================== */
 @media (max-width: 850px) {
   .hero-container {
@@ -214,6 +248,10 @@ body {
 
   .product-details {
     align-items: center;
+  }
+
+  .brand-header {
+    justify-content: center;
   }
 
   .specs-container {
