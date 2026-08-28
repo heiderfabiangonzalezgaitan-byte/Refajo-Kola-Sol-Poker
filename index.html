@@ -3,113 +3,171 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Campaña promocional Refajo de Kola Sol + Poker.">
-  <title>Kola Sol + Poker | Campaña</title>
+  <meta name="description" content="Campaña promocional Refajo de Kola Sol + Poker">
+  <title>Kola Sol × Poker | Refajo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Inicio">
-      <div id="logoSlot" class="logo-slot">KOLA SOL <span>×</span> POKER</div>
+  <!-- ===================== HEADER ===================== -->
+  <header class="header" id="inicio">
+    <a href="#inicio" class="logos">
+      <!-- CAMBIA ESTOS DOS ARCHIVOS POR TUS LOGOS PNG -->
+      <img src="assets/logo-kola-sol.png" alt="Logo Kola Sol" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <span class="logo-fallback">KOLA SOL</span>
+      <span class="x">×</span>
+      <img src="assets/logo-poker.png" alt="Logo Poker" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <span class="logo-fallback">POKER</span>
     </a>
-    <nav class="nav" id="mainNav">
-      <a class="active" href="index.html">Inicio</a>
-      <a href="producto.html">Producto</a>
-      <a href="campana.html">Campaña</a>
-      <a href="contacto.html">Contacto</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+
+    <nav class="nav" id="nav">
+      <a class="active" href="#inicio">Inicio</a>
+      <a href="#campana">Campaña</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
     </nav>
-    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
   </header>
 
   <main>
+    <!-- ===================== HERO ===================== -->
     <section class="hero">
-      <div class="hero-glow"></div>
+      <div class="hero-bg"></div>
       <div class="hero-copy reveal">
-        <p class="eyebrow">NUEVA EXPERIENCIA · KOLA SOL + POKER</p>
-        <h1>El sabor que<br><span>enciende el parche.</span></h1>
-        <p class="hero-text">Una propuesta de campaña para el nuevo Refajo de Kola Sol + Poker, pensada para conectar producto, empaque y contenido audiovisual.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="producto.html">Descubrir producto <span>→</span></a>
-          <a class="btn btn-ghost" href="campana.html">Ver campaña</a>
-        </div>
+        <p class="eyebrow">GASEOSAS SOL · COLABORACIÓN</p>
+        <h1>REF AJO DE<br><span>KOLA SOL</span><br>× POKER</h1>
+        <p class="lead">El sabor que enciende el parche. Una experiencia visual para presentar el nuevo producto, su identidad, empaque y campaña.</p>
+        <a href="#campana" class="btn">DESCUBRIR CAMPAÑA <b>→</b></a>
       </div>
-      <div class="hero-product reveal">
-        <div class="can-placeholder">
+
+      <div class="hero-can-wrap reveal">
+        <!-- =========================================================
+             IMAGEN DE TU MARCA SOBRE LA LATA
+             Reemplaza assets/etiqueta-lata.png por tu diseño.
+             La página la presenta dentro de un mockup de lata 350 ml.
+             ========================================================= -->
+        <div class="can-mockup">
           <div class="can-top"></div>
-          <div class="can-label">
-            <small>GASEOSAS SOL</small>
-            <strong>KOLA<br>SOL</strong>
-            <i>×</i>
-            <b>POKER</b>
-            <em>REFAJO</em>
+          <div class="can-body">
+            <img class="can-art" src="assets/etiqueta-lata.png" alt="Diseño de etiqueta para lata 350 ml"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="can-placeholder">
+              <small>TU DISEÑO AQUÍ</small>
+              <strong>350 ML</strong>
+              <span>Reemplaza<br>etiqueta-lata.png</span>
+            </div>
+            <div class="can-shine"></div>
           </div>
+          <div class="can-bottom"></div>
         </div>
-        <div class="orbit orbit-1"></div>
-        <div class="orbit orbit-2"></div>
-        <span class="floating-tag tag-a">350 ML</span>
-        <span class="floating-tag tag-b">NUEVO</span>
+        <span class="tag tag1">350 ML</span>
+        <span class="tag tag2">NUEVO</span>
       </div>
     </section>
 
-    <section class="stats section">
-      <div class="stat"><strong>01</strong><span>Producto<br>nuevo</span></div>
-      <div class="stat"><strong>02</strong><span>Campaña<br>promocional</span></div>
-      <div class="stat"><strong>03</strong><span>Experiencia<br>multimedia</span></div>
-      <div class="stat"><strong>18–50</strong><span>Público<br>objetivo</span></div>
+    <!-- ===================== CAMPAÑA ===================== -->
+    <section class="section campaign" id="campana">
+      <div class="section-title reveal">
+        <p class="eyebrow">01 · CAMPAÑA</p>
+        <h2>Contenido que <span>se siente.</span></h2>
+        <p>Todos los elementos de abajo se pueden cambiar directamente desde el código.</p>
+      </div>
+
+      <div class="cards">
+        <!-- CAMBIA flyer-01.jpg POR EL NOMBRE DE TU FLYER -->
+        <article class="card reveal">
+          <div class="media">
+            <img src="assets/flyer-01.jpg" alt="Flyer de campaña"
+                 onerror="this.style.display='none';this.parentElement.classList.add('placeholder')">
+            <div class="media-fallback">FLYER 01</div>
+          </div>
+          <div class="card-info"><span>PIEZA GRÁFICA</span><h3>Tu flyer principal</h3><p>Cambia la imagen en <b>assets/flyer-01.jpg</b>.</p></div>
+        </article>
+
+        <!-- CAMBIA publicidad.mp4 POR EL NOMBRE DE TU VIDEO -->
+        <article class="card reveal">
+          <div class="media video-media">
+            <video controls poster="assets/video-poster.jpg">
+              <source src="assets/publicidad.mp4" type="video/mp4">
+            </video>
+            <div class="media-fallback">▶ VIDEO PUBLICITARIO</div>
+          </div>
+          <div class="card-info"><span>AUDIOVISUAL</span><h3>Video oficial</h3><p>Cambia <b>assets/publicidad.mp4</b>.</p></div>
+        </article>
+
+        <!-- CAMBIA flyer-02.jpg POR OTRA PIEZA -->
+        <article class="card reveal">
+          <div class="media">
+            <img src="assets/flyer-02.jpg" alt="Flyer secundario"
+                 onerror="this.style.display='none';this.parentElement.classList.add('placeholder')">
+            <div class="media-fallback">FLYER 02</div>
+          </div>
+          <div class="card-info"><span>CAMPAÑA</span><h3>Segunda pieza</h3><p>Cambia la imagen en <b>assets/flyer-02.jpg</b>.</p></div>
+        </article>
+      </div>
     </section>
 
-    <section class="feature section reveal">
-      <div>
-        <p class="eyebrow">LA IDEA</p>
-        <h2>Una mezcla pensada para <span>compartir.</span></h2>
+    <!-- ===================== GALERÍA ===================== -->
+    <section class="section gallery-section" id="galeria">
+      <div class="section-title reveal">
+        <p class="eyebrow">02 · GALERÍA</p>
+        <h2>Tu marca, <span>tu universo.</span></h2>
       </div>
-      <p>El sitio funciona como vitrina digital del producto: presenta el nuevo sabor, conecta la etiqueta y el empaque con la campaña y deja espacio para incorporar flyers, fotografías y videos publicitarios.</p>
+
+      <div class="gallery-grid">
+        <!-- DUPLICA ESTE BLOQUE PARA AGREGAR MÁS IMÁGENES -->
+        <figure class="gallery-item reveal">
+          <img src="assets/galeria-01.jpg" alt="Galería 01">
+          <figcaption>Producto</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="assets/galeria-02.jpg" alt="Galería 02">
+          <figcaption>Empaque</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="assets/galeria-03.jpg" alt="Galería 03">
+          <figcaption>Campaña</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="assets/galeria-04.jpg" alt="Galería 04">
+          <figcaption>Experiencia</figcaption>
+        </figure>
+      </div>
     </section>
 
-    <section class="media-manager section reveal">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">CENTRO MULTIMEDIA</p>
-          <h2>Agrega tus piezas.</h2>
-        </div>
-        <p>Sube un logo PNG, flyers o videos desde tu computador. Los archivos se muestran de inmediato en esta sesión.</p>
+    <!-- ===================== CONTACTO ===================== -->
+    <section class="section contact" id="contacto">
+      <div class="contact-copy reveal">
+        <p class="eyebrow">03 · CONTACTO</p>
+        <h2>Hagamos que el <span>sabor hable.</span></h2>
+        <p>Formulario demostrativo para la propuesta web. Puedes conectarlo posteriormente a un servicio de formularios o backend.</p>
       </div>
 
-      <div class="upload-grid">
-        <label class="upload-card">
-          <input id="logoInput" type="file" accept="image/png,image/jpeg" hidden>
-          <span class="upload-icon">✦</span>
-          <strong>Logo</strong>
-          <small>PNG recomendado</small>
-          <span class="upload-link">Seleccionar archivo</span>
-        </label>
-        <label class="upload-card">
-          <input id="flyerInput" type="file" accept="image/*" multiple hidden>
-          <span class="upload-icon">▧</span>
-          <strong>Flyers</strong>
-          <small>JPG, PNG o WEBP</small>
-          <span class="upload-link">Agregar imágenes</span>
-        </label>
-        <label class="upload-card">
-          <input id="videoInput" type="file" accept="video/*" multiple hidden>
-          <span class="upload-icon">▶</span>
-          <strong>Videos</strong>
-          <small>MP4, WebM, MOV</small>
-          <span class="upload-link">Agregar videos</span>
-        </label>
-      </div>
-
-      <div id="mediaGallery" class="media-gallery">
-        <div class="empty-state">Tus piezas multimedia aparecerán aquí.</div>
-      </div>
+      <form id="contactForm" class="contact-form reveal">
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <textarea rows="5" placeholder="Mensaje" required></textarea>
+        <button class="btn" type="submit">ENVIAR MENSAJE <b>→</b></button>
+        <p id="formMessage"></p>
+      </form>
     </section>
   </main>
 
+  <!-- ===================== FOOTER / REDES =====================
+       CAMBIA LOS href POR LOS ENLACES REALES DE TUS REDES.
+  =============================================================== -->
   <footer class="footer">
-    <span>Gaseosas Sol · Propuesta multimedia</span>
-    <span>Refajo de Kola Sol + Poker</span>
-  </footer>
+    <div class="footer-brand">
+      <span>KOLA SOL</span><b>×</b><span>POKER</span>
+    </div>
 
-  <script src="script.js"></script>
-</body>
-</html>
+    <div class="socials">
+      <!-- CAMBIA ESTOS ENLACES -->
+      <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+      <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+      <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok">♪</a>
+      <a href="https://youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+    </div>
+
+    <p>© 2026 Kola Sol × Poker · Propuesta multimedia</p>
+  </footer>
